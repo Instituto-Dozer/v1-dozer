@@ -499,6 +499,19 @@ if (!function_exists('show_data')) {
     }
 }
 
+if (!function_exists('status_table')) {
+    function status_table($data)
+    {
+        $statusMapping = [
+            'inactive' => 'INACTIVO',
+            'active'   => 'ACTIVO',
+            // Agrega más estados según sea necesario
+        ];
+
+        // Si el estado existe en el mapeo, devuelve la etiqueta correspondiente, de lo contrario, devuelve "DESCONOCIDO"
+        return isset($statusMapping[$data]) ? $statusMapping[$data] : 'DESCONOCIDO';
+    }
+}
 
 
 // ------------------------------------------------------------------------

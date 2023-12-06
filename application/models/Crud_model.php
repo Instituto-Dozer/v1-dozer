@@ -3751,6 +3751,8 @@ class Crud_model extends CI_Model
         } elseif ($attr == 4) {
             $this->db->where(array('users.dni' => $where));
         }
+        $this->db->where('status_certificate', 'active');
+
         $this->db->order_by('users.last_name', 'asc');
         $query = $this->db->get();
         return $query->result();
@@ -3950,6 +3952,7 @@ class Crud_model extends CI_Model
         $data['institute'] = $this->input->post('institute');
         $data['code_certificate'] = $code;
         $data['link'] = $this->input->post('student') . '_' . $this->input->post('course');
+        $data['status_certificate'] = "active";
 
         $users = $this->db->where('student_id', $this->input->post('student'))->get('certificate')->result();
 
@@ -3976,12 +3979,20 @@ class Crud_model extends CI_Model
         $data['course_id'] = $this->input->post('course');
         $data['institute'] = $this->input->post('institute');
 
-        if (isset($_FILES['c_image'])) {
+        if (!empty($_FILES['c_image']['name']) && $_FILES['c_image']['size'] > 0) {
+            // Seleccionó un archivo, realiza las acciones necesarias
             unlink('uploads/certificates/' . $this->input->post('link_before'));
+
             $name = $this->input->post('code_certificate') . "." . pathinfo($_FILES['c_image']['name'], PATHINFO_EXTENSION);
             $data['link'] = $name;
 
             move_uploaded_file($_FILES['c_image']['tmp_name'], 'uploads/certificates/' . $name);
+        }
+
+        if ($this->input->post('enable_status') == '1') {
+            $data['status_certificate'] = "active";
+        } else {
+            $data['status_certificate'] = "inactive";
         }
 
         $this->db->where('id_certificate', $id);

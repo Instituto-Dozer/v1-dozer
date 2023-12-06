@@ -16,7 +16,7 @@
     <div class="col-xl-12">
         <div class="card">
             <div class="card-body">
-                <h4 class="mb-3 header-title"><?php echo get_phrase('Repositorios'); ?></h4>
+                <h4 class="mb-3 header-title">Certificados</h4>
                 <div class="table-responsive-sm mt-4">
                     <table id="basic-datatable" class="table table-striped dt-responsive nowrap dataTable no-footer dtr-inline collapsed">
                         <thead>
@@ -40,7 +40,7 @@
                                     <td><?= $certificate->last_name . " " . $certificate->first_name ?></td>
                                     <td><?= $certificate->institute ?></td>
                                     <td><?= $certificate->title ?></td>
-                                    <td><?= $certificate->status ?></td>
+                                    <td><?= status_table($certificate->status_certificate) ?></td>
                                     <td><a href="<?= base_url("uploads/certificates/" . $certificate->link) ?>" target="_blank">Enlace</a></td>
                                     <td>
                                         <div class="dropright dropright">

@@ -1,4 +1,9 @@
 <?php
+if ($certificate->status_certificate == 'active') {
+    $checked = "checked";
+} else {
+    $checked = "";
+}
 ?>
 <div class="row ">
     <div class="col-xl-12">
@@ -68,6 +73,13 @@
                                     <label class="custom-file-label" for="c_image">Elegir archivo certificado</label>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                    <div class="form-group row mb-3">
+                        <label class="col-md-2 col-form-label" for="enable_drip_content">Estado de Certificado</label>
+                        <div class="col-md-10 pt-2">
+                            <input type="checkbox" name="enable_status" value="1" id="enable_drip_content" data-switch="primary" <?= $checked ?>>
+                            <label for="enable_drip_content" data-on-label="On" data-off-label="Off"></label>
                         </div>
                     </div>
                     <input type="hidden" name="link_before" value="<?= $certificate->link ?>">
