@@ -1,8 +1,8 @@
 <section>
     <div class="container-lg">
         <div class="row">
-            <div class="col-lg-6 col-md-6 my-4">
-                <img class="bg-dark img-fluid" src="https://d127nz7k4leq8b.cloudfront.net/uploads/assigments/1642544637_certificado-catastro-completo.jpg" alt="">
+            <div class="col-lg-6 col-md-6 my-4 d-flex align-items-center">
+                <img class="bg-dark img-fluid" src="<?= base_url('uploads/certificates/'.$certificate[0]->link)?>" alt="">
             </div>
             <div class="col-lg-6 col-md-6 my-2 d-flex align-items-center">
                 <div class="course-carousel-title text-center mb-4 mt-5 text-cursos">
@@ -90,7 +90,6 @@
 
             </div>
         </div>
-        <?= var_dump($certificate) ?>
     </div>
 </section>
 
@@ -130,7 +129,7 @@
     function changeOGTags() {
         // Nuevos valores
         var newTitle = "<?= $certificate[0]->first_name . " " . $certificate[0]->last_name . " - " . $certificate[0]->title; ?>";
-        var newImageURL = "<?= base_url("certificado/" . $certificate[0]->code_certificate . ".png"); ?>";
+        var newImageURL = "<?= base_url("certificado/" . $certificate[0]->link . ".png"); ?>";
         var newDescription = "<?= "¡Aprobé el Curso de " . $certificate[0]->title; ?>";
 
         // Seleccionar los meta tags y actualizar sus contenidos
