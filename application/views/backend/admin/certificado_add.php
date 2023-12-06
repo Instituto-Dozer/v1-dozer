@@ -52,7 +52,7 @@
                         <div class="col-md-10">
                             <div class="input-group">
                                 <div class="custom-file">
-                                    <input type="file" class="custom-file-input" id="c_image" name="c_image" accept="doc,.docx,.pdf">
+                                <input type="file" class="custom-file-input" id="c_image" name="c_image" accept=".jpg, .png, .jpeg" />
                                     <label class="custom-file-label" for="c_image">Elegir archivo certificado</label>
                                 </div>
                             </div>

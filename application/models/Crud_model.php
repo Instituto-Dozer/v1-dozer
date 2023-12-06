@@ -3960,7 +3960,7 @@ class Crud_model extends CI_Model
         endforeach;
 
         if (isset($_FILES['c_image'])) {
-            $name = $this->input->post('student') . "_" . $this->input->post('course') . "." . pathinfo($_FILES['c_image']['name'], PATHINFO_EXTENSION);
+            $name = $code . "." . pathinfo($_FILES['c_image']['name'], PATHINFO_EXTENSION);
 
             $data['link'] =  $name;
             move_uploaded_file($_FILES['c_image']['tmp_name'], 'uploads/certificates/' . $name);
@@ -3975,13 +3975,12 @@ class Crud_model extends CI_Model
         $data['student_id'] = $this->input->post('student');
         $data['course_id'] = $this->input->post('course');
         $data['institute'] = $this->input->post('institute');
-        $data['link'] = $this->input->post('student') . '_' . $this->input->post('course');
 
         if (isset($_FILES['c_image'])) {
             unlink('uploads/certificates/' . $this->input->post('link_before'));
-            $name = $this->input->post('student') . "_" . $this->input->post('course') . "." . pathinfo($_FILES['c_image']['name'], PATHINFO_EXTENSION);
+            $name = $this->input->post('code_certificate') . "." . pathinfo($_FILES['c_image']['name'], PATHINFO_EXTENSION);
+            $data['link'] = $name;
 
-            $data['link'] =  $name;
             move_uploaded_file($_FILES['c_image']['tmp_name'], 'uploads/certificates/' . $name);
         }
 

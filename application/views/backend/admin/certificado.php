@@ -26,6 +26,7 @@
                                 <th>Estudiante</th>
                                 <th>Institución</th>
                                 <th>Curso</th>
+                                <th>Estado</th>
                                 <th>Link</th>
                                 <th>acciones</th>
                             </tr>
@@ -39,6 +40,7 @@
                                     <td><?= $certificate->last_name . " " . $certificate->first_name ?></td>
                                     <td><?= $certificate->institute ?></td>
                                     <td><?= $certificate->title ?></td>
+                                    <td><?= $certificate->status ?></td>
                                     <td><a href="<?= base_url("uploads/certificates/" . $certificate->link) ?>" target="_blank">Enlace</a></td>
                                     <td>
                                         <div class="dropright dropright">

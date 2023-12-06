@@ -53,8 +53,10 @@
                         <label for="investigation">Seleccione Institución</label>
                         <select class="form-control select2" data-toggle="select2" name="institute" id="institute" required>
                             <option value="" selected disabled>Seleccione una institución</option>
-                            <option value="Instituto Dozer" <?php if($certificate->institute == 'Instituto Dozer') : echo 'selected'; endif;?> >Instituto Dozer</option>
-                            <option value="Colegio de Ingenieros del Perú (CIP)" <?php if($certificate->institute == 'Colegio de Ingenieros del Perú (CIP)') : echo 'selected'; endif;?>>Colegio de Ingenieros del Perú (CIP)</option>
+                            <option value="Instituto Dozer" <?php if ($certificate->institute == 'Instituto Dozer') : echo 'selected';
+                                                            endif; ?>>Instituto Dozer</option>
+                            <option value="Colegio de Ingenieros del Perú (CIP)" <?php if ($certificate->institute == 'Colegio de Ingenieros del Perú (CIP)') : echo 'selected';
+                                                                                    endif; ?>>Colegio de Ingenieros del Perú (CIP)</option>
                         </select>
                     </div>
                     <div class="form-group row mb-3">
@@ -62,13 +64,14 @@
                         <div class="col-md-10">
                             <div class="input-group">
                                 <div class="custom-file">
-                                    <input type="file" class="custom-file-input" id="c_image" name="c_image" accept="doc,.docx,.pdf">
+                                    <input type="file" class="custom-file-input" id="c_image" name="c_image" accept=".jpg, .png, .jpeg" />
                                     <label class="custom-file-label" for="c_image">Elegir archivo certificado</label>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <input type="hidden" name="link_before" value="<?= $certificate->link ?>">
+                    <input type="hidden" name="code_certificate" value="<?= $certificate->code_certificate ?>">
                     <div class="form-group mt-4">
                         <button class="btn btn-success">Editar Certificado</button>
                     </div>
