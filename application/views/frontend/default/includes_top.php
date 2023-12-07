@@ -21,3 +21,4 @@
 
 <link rel="stylesheet" href="<?php echo base_url() . 'assets/global/toastr/toastr.css' ?>">
 <script src="<?php echo base_url('assets/backend/js/jquery-3.3.1.min.js'); ?>"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>

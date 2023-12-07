@@ -2,7 +2,7 @@
     <div class="container-lg">
         <div class="row">
             <div class="col-lg-6 col-md-6 my-4 d-flex align-items-center">
-                <img class="bg-dark img-fluid" src="<?= base_url('uploads/certificates/' . $certificate[0]->link) ?>" alt="">
+                <img class="bg-dark img-fluid" id="img-certificate" src="<?= base_url('uploads/certificates/' . $certificate[0]->link) ?>" alt="">
             </div>
             <div class="col-lg-6 col-md-6 my-2 d-flex align-items-center">
                 <div class="course-carousel-title text-center mb-4 mt-5 text-cursos">
@@ -84,7 +84,7 @@
                         </div>
                     </div><br>
                     <div class="d-block mt-3">
-                        <a target="_blank" href="https://d127nz7k4leq8b.cloudfront.net/uploads/assigments/1642544637_certificado-catastro-completo.pdf" class=" btn-programa d-inline-block btn-hover py-1">Descargar Certificado <i class="fa fa-download" style="color: #000000;"></i></a>
+                        <a href="javascript:void(0)" class=" btn-programa d-inline-block btn-hover py-1" id="generatePDF">Descargar Certificado <i class="fa fa-download" style="color: #000000;"></i></a>
                     </div>
                 </div>
 
@@ -94,96 +94,122 @@
 </section>
 
 <script>
-    // Función para copiar la URL al portapapeles
-    function handleClick(event) {
-        event.preventDefault();
-        // Obtiene la URL actual
-        var urlActual = window.location.href;
+    document.addEventListener('DOMContentLoaded', function() {
+        const generatePDFBtn = document.getElementById('generatePDF');
 
-        // Crea un área de texto temporal para copiar el contenido
-        var areaDeTextoTemporal = document.createElement("textarea");
-        areaDeTextoTemporal.value = urlActual;
+        // Función para copiar la URL al portapapeles
+        function handleClick(event) {
+            event.preventDefault();
+            // Obtiene la URL actual
+            var urlActual = window.location.href;
 
-        // Añade el área de texto temporal al DOM
-        document.body.appendChild(areaDeTextoTemporal);
+            // Crea un área de texto temporal para copiar el contenido
+            var areaDeTextoTemporal = document.createElement("textarea");
+            areaDeTextoTemporal.value = urlActual;
 
-        // Selecciona y copia el contenido del área de texto
-        areaDeTextoTemporal.select();
-        document.execCommand("copy");
+            // Añade el área de texto temporal al DOM
+            document.body.appendChild(areaDeTextoTemporal);
 
-        // Elimina el área de texto temporal del DOM
-        document.body.removeChild(areaDeTextoTemporal);
+            // Selecciona y copia el contenido del área de texto
+            areaDeTextoTemporal.select();
+            document.execCommand("copy");
 
-        // Puedes agregar mensajes o acciones adicionales después de copiar
+            // Elimina el área de texto temporal del DOM
+            document.body.removeChild(areaDeTextoTemporal);
 
-        // Muestra la alerta de Bootstrap
-        toastr.options = {
-            closeButton: true,
-            progressBar: true,
-            positionClass: 'toast-top-center',
-            preventDuplicates: true,
-        };
-        toastr.success('¡URL Copiado!');
-    }
+            // Puedes agregar mensajes o acciones adicionales después de copiar
 
-    function changeOGTags() {
-        // Nuevos valores
-        var newTitle = "<?= $certificate[0]->first_name . " " . $certificate[0]->last_name . " - " . $certificate[0]->title; ?>";
-        var newImageURL = "<?= base_url("uploads/certificates/" . $certificate[0]->link); ?>";
-        var newDescription = "<?= "¡Aprobé el Curso de " . $certificate[0]->title; ?>";
+            // Muestra la alerta de Bootstrap
+            toastr.options = {
+                closeButton: true,
+                progressBar: true,
+                positionClass: 'toast-top-center',
+                preventDuplicates: true,
+            };
+            toastr.success('¡URL Copiado!');
+        }
 
-        // Seleccionar los meta tags y actualizar sus contenidos
-        var ogTitleTag = document.querySelector('meta[property="og:title"]');
-        var ogImageTag = document.querySelector('meta[property="og:image"]');
-        var ogDescriptionTag = document.querySelector('meta[property="og:description"]');
+        function changeOGTags() {
+            // Nuevos valores
+            var newTitle = "<?= $certificate[0]->first_name . " " . $certificate[0]->last_name . " - " . $certificate[0]->title; ?>";
+            var newImageURL = "<?= base_url("uploads/certificates/" . $certificate[0]->link); ?>";
+            var newDescription = "<?= "¡Aprobé el Curso de " . $certificate[0]->title; ?>";
 
-        var twTitleTag = document.querySelector('meta[property="twitter:title"]');
-        var twImageTag = document.querySelector('meta[property="twitter:image"]');
-        var twDescriptionTag = document.querySelector('meta[property="twitter:description"]');
+            // Seleccionar los meta tags y actualizar sus contenidos
+            var ogTitleTag = document.querySelector('meta[property="og:title"]');
+            var ogImageTag = document.querySelector('meta[property="og:image"]');
+            var ogDescriptionTag = document.querySelector('meta[property="og:description"]');
 
-        ogTitleTag.setAttribute("content", newTitle);
-        twTitleTag.setAttribute("content", newTitle);
+            var twTitleTag = document.querySelector('meta[property="twitter:title"]');
+            var twImageTag = document.querySelector('meta[property="twitter:image"]');
+            var twDescriptionTag = document.querySelector('meta[property="twitter:description"]');
 
-        ogImageTag.setAttribute("content", newImageURL);
-        twImageTag.setAttribute("content", newImageURL);
+            ogTitleTag.setAttribute("content", newTitle);
+            twTitleTag.setAttribute("content", newTitle);
 
-        ogDescriptionTag.setAttribute("content", newDescription);
-        twDescriptionTag.setAttribute("content", newDescription);
-    }
+            ogImageTag.setAttribute("content", newImageURL);
+            twImageTag.setAttribute("content", newImageURL);
 
-    function twitterClick(event) {
-        event.preventDefault();
-        // Obtiene la URL actual
-        var urlToShare = window.location.href;
-        var newDescription = "<?= "¡Aprobé el Curso de " . $certificate[0]->title; ?>";
+            ogDescriptionTag.setAttribute("content", newDescription);
+            twDescriptionTag.setAttribute("content", newDescription);
+        }
 
-        var twitterShareUrl = 'https://twitter.com/intent/tweet?url=' + encodeURIComponent(urlToShare) + '&text=' + encodeURIComponent(newDescription);
+        function twitterClick(event) {
+            event.preventDefault();
+            // Obtiene la URL actual
+            var urlToShare = window.location.href;
+            var newDescription = "<?= "¡Aprobé el Curso de " . $certificate[0]->title; ?>";
 
-        window.open(twitterShareUrl, '_blank');
-    }
+            var twitterShareUrl = 'https://twitter.com/intent/tweet?url=' + encodeURIComponent(urlToShare) + '&text=' + encodeURIComponent(newDescription);
 
-    function linkedIn(event) {
-        var urlToShare = window.location.href;
+            window.open(twitterShareUrl, '_blank');
+        }
 
-        var linkedInShareUrl = 'https://www.linkedin.com/sharing/share-offsite/?url=' + encodeURIComponent(urlToShare);
+        function linkedIn(event) {
+            var urlToShare = window.location.href;
 
-        window.open(linkedInShareUrl, '_blank');
-    }
+            var linkedInShareUrl = 'https://www.linkedin.com/sharing/share-offsite/?url=' + encodeURIComponent(urlToShare);
 
-    function whatsappClick(event) {
-        event.preventDefault();
-        // Obtiene la URL actual
-        var urlToShare = window.location.href;
-        var textToShare = "<?= "¡Aprobé el Curso de " . $certificate[0]->title; ?>";
+            window.open(linkedInShareUrl, '_blank');
+        }
 
-        var whatsappShareUrl = 'https://api.whatsapp.com/send?text=' + encodeURIComponent(textToShare + ' ' + urlToShare);
+        function whatsappClick(event) {
+            event.preventDefault();
+            // Obtiene la URL actual
+            var urlToShare = window.location.href;
+            var textToShare = "<?= "¡Aprobé el Curso de " . $certificate[0]->title; ?>";
 
-        window.open(whatsappShareUrl, '_blank');
-    }
-    changeOGTags();
-    // Agrega un evento de clic al enlace para activar la función de copia
-    document.getElementById("clipboard").addEventListener("click", handleClick);
-    document.getElementById("twitter_btn").addEventListener("click", twitterClick);
-    document.getElementById('linkedinShare').addEventListener('click', linkedIn);
-    document.getElementById('whatsappShare').addEventListener('click', whatsappClick);
+            var whatsappShareUrl = 'https://api.whatsapp.com/send?text=' + encodeURIComponent(textToShare + ' ' + urlToShare);
+
+            window.open(whatsappShareUrl, '_blank');
+        }
+
+        function generatePDF() {
+            // Get the image
+            const image = document.getElementById('img-certificate');
+
+            // Calcula las dimensiones del PDF a partir de la relación de aspecto de la imagen
+            const aspectRatio = image.width / image.height;
+            const pdfWidth = 210; // Ancho del PDF en mm (puedes ajustarlo según tus necesidades)
+            const pdfHeight = pdfWidth / aspectRatio;
+
+            // Crea una instancia de jsPDF con las dimensiones calculadas
+            const pdf = new window.jspdf.jsPDF({
+                orientation: "landscape",
+                unit: 'mm',
+                format: [pdfWidth, pdfHeight]
+            });
+            // Agrega la imagen al PDF
+            pdf.addImage(image.src, 'JPEG', 0, 0, pdfWidth, pdfHeight);
+            // Save the PDF as a downloadable file
+            pdf.save('document.pdf');
+        }
+        changeOGTags();
+        // Agrega un evento de clic al enlace para activar la función de copia
+        document.getElementById("clipboard").addEventListener("click", handleClick);
+        document.getElementById("twitter_btn").addEventListener("click", twitterClick);
+        document.getElementById('linkedinShare').addEventListener('click', linkedIn);
+        document.getElementById('whatsappShare').addEventListener('click', whatsappClick);
+        generatePDFBtn.addEventListener('click', generatePDF);
+    });
 </script>
