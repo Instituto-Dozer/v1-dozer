@@ -2,7 +2,7 @@
     <div class="container-lg">
         <div class="row">
             <div class="col-lg-6 col-md-6 my-4 d-flex align-items-center">
-                <img class="bg-dark img-fluid" src="<?= base_url('uploads/certificates/'.$certificate[0]->link)?>" alt="">
+                <img class="bg-dark img-fluid" src="<?= base_url('uploads/certificates/' . $certificate[0]->link) ?>" alt="">
             </div>
             <div class="col-lg-6 col-md-6 my-2 d-flex align-items-center">
                 <div class="course-carousel-title text-center mb-4 mt-5 text-cursos">
@@ -129,7 +129,7 @@
     function changeOGTags() {
         // Nuevos valores
         var newTitle = "<?= $certificate[0]->first_name . " " . $certificate[0]->last_name . " - " . $certificate[0]->title; ?>";
-        var newImageURL = "<?= base_url("certificado/" . $certificate[0]->link . ".png"); ?>";
+        var newImageURL = "<?= base_url("uploads/certificates/" . $certificate[0]->link); ?>";
         var newDescription = "<?= "¡Aprobé el Curso de " . $certificate[0]->title; ?>";
 
         // Seleccionar los meta tags y actualizar sus contenidos
@@ -185,5 +185,5 @@
     document.getElementById("clipboard").addEventListener("click", handleClick);
     document.getElementById("twitter_btn").addEventListener("click", twitterClick);
     document.getElementById('linkedinShare').addEventListener('click', linkedIn);
-    document.getElementById('whatsappShare').addEventListener('click',whatsappClick);
+    document.getElementById('whatsappShare').addEventListener('click', whatsappClick);
 </script>
