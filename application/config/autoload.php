@@ -103,7 +103,7 @@ $autoload['helper'] = array('url','file','form','security','string','inflector',
 | config files.  Otherwise, leave it blank.
 |
 */
-$autoload['config'] = array();
+$autoload['config'] = array('mercadopago');
 
 /*
 | -------------------------------------------------------------------

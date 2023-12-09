@@ -355,24 +355,23 @@
 		e.preventDefault();
 		realizarBusqueda();
 	});
-
 	function format_date(i) {
-		// Get the current date
-		var currentDate = new Date(i);
+    // Get the current date
+    var currentDate = new Date(i);
 
-		// Array with the names of the months
-		var monthNames = [
-			"Enero", "Febrero", "Marzo", "Abril",
-			"Mayo", "Junio", "Julio", "Agosto",
-			"Septiembre", "Octubre", "Noviembre", "Diciembre"
-		];
+    // Array with the names of the months
+    var monthNames = [
+        "Enero", "Febrero", "Marzo", "Abril",
+        "Mayo", "Junio", "Julio", "Agosto",
+        "Septiembre", "Octubre", "Noviembre", "Diciembre"
+    ];
 
-		// Get day, month, and year
-		var day = currentDate.getDate();
-		var month = currentDate.getMonth();
-		var year = currentDate.getFullYear();
+    // Get day, month, and year
+    var day = currentDate.getDate();
+    var month = currentDate.getMonth() + 1;  // Sumar 1 al mes
+    var year = currentDate.getFullYear();
 
-		// Display the date in the desired format
-		return displayedDate = day + "/" + month + "/" + year;
-	}
+    // Display the date in the desired format
+    return displayedDate = day + "/" + month + "/" + year;
+}
 </script>

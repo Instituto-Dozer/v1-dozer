@@ -1,3 +1,6 @@
 
 application/config/database.php
 application/language/espaol.json
+application/config/autoload.php
+application/config/config.php
+application/config/mercadopago.php

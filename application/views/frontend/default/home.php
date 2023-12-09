@@ -714,7 +714,7 @@ section .content p {
                 <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
                         <div class="col-12 col-sm-6 col-md-4 col-xl-3 px-0">
                             <div class="course-box-wrap">
-                                <a onclick="$(location).attr('href', 'http://localhost/dozer-dev/home/course/revit-arquitectura/17');"
+                                <a onclick="$(location).attr('href', '<?= base_url()?>home/course/revit-arquitectura/17');"
                                     href="javascript:;" class="has-popover">
                                     <div class="course-box">
                                         <div class="course-image">
@@ -767,7 +767,7 @@ section .content p {
                         </div>
                         <div class="col-12 col-sm-6 col-md-4 col-xl-3 px-0">
                             <div class="course-box-wrap">
-                                <a onclick="$(location).attr('href', 'http://localhost/dozer-dev/home/course/revit-arquitectura/19');"
+                                <a onclick="$(location).attr('href', '<?= base_url()?>home/course/revit-arquitectura/19');"
                                     href="javascript:;" class="has-popover">
                                     <div class="course-box">
                                         <div class="course-image">
@@ -818,7 +818,7 @@ section .content p {
                         </div>
                         <div class="col-12 col-sm-6 col-md-4 col-xl-3 px-0">
                             <div class="course-box-wrap">
-                                <a onclick="$(location).attr('href', 'http://localhost/dozer-dev/home/course/3ds-max/64');"
+                                <a onclick="$(location).attr('href', '<?= base_url()?>home/course/3ds-max/64');"
                                     href="javascript:;" class="has-popover">
                                     <div class="course-box">
                                         <div class="course-image">
@@ -869,13 +869,13 @@ section .content p {
                         </div>
                         <div class="col-12 col-sm-6 col-md-4 col-xl-3 px-0">
                             <div class="course-box-wrap">
-                                <a onclick="$(location).attr('href', 'http://localhost/dozer-dev/home/course/3ds-max/66');"
+                                <a onclick="$(location).attr('href', '<?= base_url()?>home/course/3ds-max/66');"
                                     href="javascript:;" class="has-popover">
                                     <div class="course-box">
                                         <div class="course-image">
 
 
-                                            <img src="http://localhost/dozer-dev/uploads/thumbnails/course_thumbnails/course_thumbnail_default_66.jpg"
+                                            <img src="<?= base_url()?>uploads/thumbnails/course_thumbnails/course_thumbnail_default_66.jpg"
                                                 alt="" class="img-fluid">
                                         </div>
                                         <div class="d-none d-sm-none d-md-none d-lg-none d-xl-block d-xxl-block">
@@ -929,7 +929,7 @@ section .content p {
 
                         <div class="col-12 col-sm-6 col-md-4 col-xl-3 px-0">
                             <div class="course-box-wrap">
-                                <a onclick="$(location).attr('href', 'http://localhost/dozer-dev/home/course/revit-estructura/21');"
+                                <a onclick="$(location).attr('href', '<?= base_url()?>home/course/revit-estructura/21');"
                                     href="javascript:;" class="has-popover">
                                     <div class="course-box">
                                         <div class="course-image">
@@ -981,7 +981,7 @@ section .content p {
                         </div>
                         <div class="col-12 col-sm-6 col-md-4 col-xl-3 px-0">
                             <div class="course-box-wrap">
-                                <a onclick="$(location).attr('href', 'http://localhost/dozer-dev/home/course/revit-estructura/23');"
+                                <a onclick="$(location).attr('href', '<?= base_url()?>home/course/revit-estructura/23');"
                                     href="javascript:;" class="has-popover">
                                     <div class="course-box">
                                         <div class="course-image">
@@ -1032,7 +1032,7 @@ section .content p {
                         </div>
                         <div class="col-12 col-sm-6 col-md-4 col-xl-3 px-0">
                             <div class="course-box-wrap">
-                                <a onclick="$(location).attr('href', 'http://localhost/dozer-dev/home/course/robot-structural-analysis/25');"
+                                <a onclick="$(location).attr('href', '<?= base_url()?>home/course/robot-structural-analysis/25');"
                                     href="javascript:;" class="has-popover">
                                     <div class="course-box">
                                         <div class="course-image">
@@ -1084,7 +1084,7 @@ section .content p {
                         </div>
                         <div class="col-12 col-sm-6 col-md-4 col-xl-3 px-0">
                             <div class="course-box-wrap">
-                                <a onclick="$(location).attr('href', 'http://localhost/dozer-dev/home/course/robot-structural-analysis/27');"
+                                <a onclick="$(location).attr('href', '<?= base_url()?>home/course/robot-structural-analysis/27');"
                                     href="javascript:;" class="has-popover">
                                     <div class="course-box">
                                         <div class="course-image">
@@ -1136,7 +1136,7 @@ section .content p {
                         </div>
                         <div class="col-12 col-sm-6 col-md-4 col-xl-3 px-0">
                             <div class="course-box-wrap">
-                                <a onclick="$(location).attr('href', 'http://localhost/dozer-dev/home/course/advance-steel/28');"
+                                <a onclick="$(location).attr('href', '<?= base_url()?>home/course/advance-steel/28');"
                                     href="javascript:;" class="has-popover">
                                     <div class="course-box">
                                         <div class="course-image">
@@ -1187,7 +1187,7 @@ section .content p {
                         </div>
                         <div class="col-12 col-sm-6 col-md-4 col-xl-3 px-0">
                             <div class="course-box-wrap">
-                                <a onclick="$(location).attr('href', 'http://localhost/dozer-dev/home/course/advance-steel/30');"
+                                <a onclick="$(location).attr('href', '<?= base_url()?>home/course/advance-steel/30');"
                                     href="javascript:;" class="has-popover">
                                     <div class="course-box">
                                         <div class="course-image">
@@ -1238,7 +1238,7 @@ section .content p {
 
                         <div class="col-12 col-sm-6 col-md-4 col-xl-3 px-0">
                             <div class="course-box-wrap">
-                                <a onclick="$(location).attr('href', 'http://localhost/dozer-dev/home/course/inventor-professional/67');"
+                                <a onclick="$(location).attr('href', '<?= base_url()?>home/course/inventor-professional/67');"
                                     href="javascript:;" class="has-popover">
                                     <div class="course-box">
                                         <div class="course-image">
@@ -1290,7 +1290,7 @@ section .content p {
                         </div>
                         <div class="col-12 col-sm-6 col-md-4 col-xl-3 px-0">
                             <div class="course-box-wrap">
-                                <a onclick="$(location).attr('href', 'http://localhost/dozer-dev/home/course/inventor-professional/69');"
+                                <a onclick="$(location).attr('href', '<?= base_url()?>home/course/inventor-professional/69');"
                                     href="javascript:;" class="has-popover">
                                     <div class="course-box">
                                         <div class="course-image">
@@ -1341,7 +1341,7 @@ section .content p {
                         </div>
                         <div class="col-12 col-sm-6 col-md-4 col-xl-3 px-0">
                             <div class="course-box-wrap">
-                                <a onclick="$(location).attr('href', 'http://localhost/dozer-dev/home/course/autocad-plant-3d/70');"
+                                <a onclick="$(location).attr('href', '<?= base_url()?>home/course/autocad-plant-3d/70');"
                                     href="javascript:;" class="has-popover">
                                     <div class="course-box">
                                         <div class="course-image">
@@ -1393,7 +1393,7 @@ section .content p {
                         </div>
                         <div class="col-12 col-sm-6 col-md-4 col-xl-3 px-0">
                             <div class="course-box-wrap">
-                                <a onclick="$(location).attr('href', 'http://localhost/dozer-dev/home/course/autocad-plant-3d/72');"
+                                <a onclick="$(location).attr('href', '<?= base_url()?>home/course/autocad-plant-3d/72');"
                                     href="javascript:;" class="has-popover">
                                     <div class="course-box">
                                         <div class="course-image">
@@ -1450,7 +1450,7 @@ section .content p {
                     <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
                         <div class="col-12 col-sm-6 col-md-4 col-xl-3 px-0">
                             <div class="course-box-wrap">
-                                <a onclick="$(location).attr('href', 'http://localhost/dozer-dev/home/course/revit-mep/31');"
+                                <a onclick="$(location).attr('href', '<?= base_url()?>home/course/revit-mep/31');"
                                     href="javascript:;" class="has-popover">
                                     <div class="course-box">
                                         <div class="course-image">
@@ -1502,7 +1502,7 @@ section .content p {
                         </div>
                         <div class="col-12 col-sm-6 col-md-4 col-xl-3 px-0">
                             <div class="course-box-wrap">
-                                <a onclick="$(location).attr('href', 'http://localhost/dozer-dev/home/course/revit-mep/33');"
+                                <a onclick="$(location).attr('href', '<?= base_url()?>home/course/revit-mep/33');"
                                     href="javascript:;" class="has-popover">
                                     <div class="course-box">
                                         <div class="course-image">
@@ -1561,7 +1561,7 @@ section .content p {
                     <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
                         <div class="col-12 col-sm-6 col-md-4 col-xl-3 px-0">
                             <div class="course-box-wrap">
-                                <a onclick="$(location).attr('href', 'http://localhost/dozer-dev/home/course/autocad/35');"
+                                <a onclick="$(location).attr('href', '<?= base_url()?>home/course/autocad/35');"
                                     href="javascript:;" class="has-popover">
                                     <div class="course-box">
                                         <div class="course-image">
@@ -1612,7 +1612,7 @@ section .content p {
                         </div>
                         <div class="col-12 col-sm-6 col-md-4 col-xl-3 px-0">
                             <div class="course-box-wrap">
-                                <a onclick="$(location).attr('href', 'http://localhost/dozer-dev/home/course/autocad/37');"
+                                <a onclick="$(location).attr('href', '<?= base_url()?>home/course/autocad/37');"
                                     href="javascript:;" class="has-popover">
                                     <div class="course-box">
                                         <div class="course-image">
@@ -1670,7 +1670,7 @@ section .content p {
                     <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
                         <div class="col-12 col-sm-6 col-md-4  col-xl-3 px-0">
                             <div class="course-box-wrap">
-                                <a onclick="$(location).attr('href', 'http://localhost/dozer-dev/home/course/civil-3d/39');"
+                                <a onclick="$(location).attr('href', '<?= base_url()?>home/course/civil-3d/39');"
                                     href="javascript:;" class="has-popover">
                                     <div class="course-box">
                                         <div class="course-image">
@@ -1722,7 +1722,7 @@ section .content p {
                         </div>
                         <div class="col-12 col-sm-6 col-md-4  col-xl-3 px-0">
                             <div class="course-box-wrap">
-                                <a onclick="$(location).attr('href', 'http://localhost/dozer-dev/home/course/civil-3d/41');"
+                                <a onclick="$(location).attr('href', '<?= base_url()?>home/course/civil-3d/41');"
                                     href="javascript:;" class="has-popover">
                                     <div class="course-box">
                                         <div class="course-image">
@@ -1774,7 +1774,7 @@ section .content p {
                         </div>
                         <div class="col-12 col-sm-6 col-md-4  col-xl-3 px-0">
                             <div class="course-box-wrap">
-                                <a onclick="$(location).attr('href', 'http://localhost/dozer-dev/home/course/infraworks/43');"
+                                <a onclick="$(location).attr('href', '<?= base_url()?>home/course/infraworks/43');"
                                     href="javascript:;" class="has-popover">
                                     <div class="course-box">
                                         <div class="course-image">
@@ -1826,7 +1826,7 @@ section .content p {
                         </div>
                         <div class="col-12 col-sm-6 col-md-4  col-xl-3 px-0">
                             <div class="course-box-wrap">
-                                <a onclick="$(location).attr('href', 'http://localhost/dozer-dev/home/course/infraworks/45');"
+                                <a onclick="$(location).attr('href', '<?= base_url()?>home/course/infraworks/45');"
                                     href="javascript:;" class="has-popover">
                                     <div class="course-box">
                                         <div class="course-image">
@@ -1884,7 +1884,7 @@ section .content p {
                     <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
                         <div class="col-12 col-sm-6 col-md-4 col-xl-3 px-0">
                             <div class="course-box-wrap">
-                                <a onclick="$(location).attr('href', 'http://localhost/dozer-dev/home/course/dynamo-para-revit/46');"
+                                <a onclick="$(location).attr('href', '<?= base_url()?>home/course/dynamo-para-revit/46');"
                                     href="javascript:;" class="has-popover">
                                     <div class="course-box">
                                         <div class="course-image">
@@ -1935,7 +1935,7 @@ section .content p {
                         </div>
                         <div class="col-12 col-sm-6 col-md-4 col-xl-3 px-0">
                             <div class="course-box-wrap">
-                                <a onclick="$(location).attr('href', 'http://localhost/dozer-dev/home/course/dynamo-para-revit/48');"
+                                <a onclick="$(location).attr('href', '<?= base_url()?>home/course/dynamo-para-revit/48');"
                                     href="javascript:;" class="has-popover">
                                     <div class="course-box">
                                         <div class="course-image">
@@ -1993,7 +1993,7 @@ section .content p {
                 <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
                         <div class="col-12 col-sm-6 col-md-4 col-xl-3 px-0">
                             <div class="course-box-wrap">
-                                <a onclick="$(location).attr('href', 'http://localhost/dozer-dev/home/course/navisworks-manage/49');"
+                                <a onclick="$(location).attr('href', '<?= base_url()?>home/course/navisworks-manage/49');"
                                     href="javascript:;" class="has-popover">
                                     <div class="course-box">
                                         <div class="course-image">
@@ -2045,7 +2045,7 @@ section .content p {
                         </div>
                         <div class="col-12 col-sm-6 col-md-4 col-xl-3 px-0">
                             <div class="course-box-wrap">
-                                <a onclick="$(location).attr('href', 'http://localhost/dozer-dev/home/course/navisworks-manage/51');"
+                                <a onclick="$(location).attr('href', '<?= base_url()?>home/course/navisworks-manage/51');"
                                     href="javascript:;" class="has-popover">
                                     <div class="course-box">
                                         <div class="course-image">
@@ -2540,7 +2540,7 @@ section .contentt p {
                     <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
                         <div class="col-12 col-sm-6 col-md-4 col-xl-3 px-0">
                             <div class="course-box-wrap">
-                                <a onclick="$(location).attr('href', 'http://localhost/dozer-dev/home/course/modelador-bim-aplicado-a-edificaciones/1');"
+                                <a onclick="$(location).attr('href', '<?= base_url()?>home/course/modelador-bim-aplicado-a-edificaciones/1');"
                                     href="javascript:;" class="has-popover">
                                     <div class="course-box">
                                         <div class="course-image">
@@ -2589,7 +2589,7 @@ section .contentt p {
                         </div>
                         <div class="col-12 col-sm-6 col-md-4 col-xl-3 px-0">
                             <div class="course-box-wrap">
-                                <a onclick="$(location).attr('href', 'http://localhost/dozer-dev/home/course/modelador-bim-aplicado-a-obras-viales/2');"
+                                <a onclick="$(location).attr('href', '<?= base_url()?>home/course/modelador-bim-aplicado-a-obras-viales/2');"
                                     href="javascript:;" class="has-popover">
                                     <div class="course-box">
                                         <div class="course-image">
@@ -2640,7 +2640,7 @@ section .contentt p {
                         </div>
                         <div class="col-12 col-sm-6 col-md-4 col-xl-3 px-0">
                             <div class="course-box-wrap">
-                                <a onclick="$(location).attr('href', 'http://localhost/dozer-dev/home/course/modelador-bim-aplicado-a-obras-hidr%C3%A1ulicas/3');"
+                                <a onclick="$(location).attr('href', '<?= base_url()?>home/course/modelador-bim-aplicado-a-obras-hidr%C3%A1ulicas/3');"
                                     href="javascript:;" class="has-popover">
                                     <div class="course-box">
                                         <div class="course-image">
@@ -2689,7 +2689,7 @@ section .contentt p {
                         </div>
                         <div class="col-12 col-sm-6 col-md-4 col-xl-3 px-0">
                             <div class="course-box-wrap">
-                                <a onclick="$(location).attr('href', 'http://localhost/dozer-dev/home/course/modelador-bim-aplicado-a-estructuras-met%C3%A1licas/4');"
+                                <a onclick="$(location).attr('href', '<?= base_url()?>home/course/modelador-bim-aplicado-a-estructuras-met%C3%A1licas/4');"
                                     href="javascript:;" class="has-popover">
                                     <div class="course-box">
                                         <div class="course-image">
@@ -2739,7 +2739,7 @@ section .contentt p {
                         </div>
                         <div class="col-12 col-sm-6 col-md-4 col-xl-3 px-0">
                             <div class="course-box-wrap">
-                                <a onclick="$(location).attr('href', 'http://localhost/dozer-dev/home/course/modelador-bim-aplicado-a-proyectos-green/74');"
+                                <a onclick="$(location).attr('href', '<?= base_url()?>home/course/modelador-bim-aplicado-a-proyectos-green/74');"
                                     href="javascript:;" class="has-popover">
                                     <div class="course-box">
                                         <div class="course-image">
@@ -2785,7 +2785,7 @@ section .contentt p {
                         </div>
                         <div class="col-12 col-sm-6 col-md-4 col-xl-3 px-0">
                             <div class="course-box-wrap">
-                                <a onclick="$(location).attr('href', 'http://localhost/dozer-dev/home/course/especialista-bim-en-habilitaciones-urbanas/88');"
+                                <a onclick="$(location).attr('href', '<?= base_url()?>home/course/especialista-bim-en-habilitaciones-urbanas/88');"
                                     href="javascript:;" class="has-popover">
                                     <div class="course-box">
                                         <div class="course-image">
@@ -2834,7 +2834,7 @@ section .contentt p {
                         </div>
                         <div class="col-12 col-sm-6 col-md-4 col-xl-3 px-0">
                             <div class="course-box-wrap">
-                                <a onclick="$(location).attr('href', 'http://localhost/dozer-dev/home/course/especialista-bim-en-automatizaci%C3%B3n-de-procesos/89');"
+                                <a onclick="$(location).attr('href', '<?= base_url()?>home/course/especialista-bim-en-automatizaci%C3%B3n-de-procesos/89');"
                                     href="javascript:;" class="has-popover">
                                     <div class="course-box">
                                         <div class="course-image">
@@ -2891,7 +2891,7 @@ section .contentt p {
 
                         <div class="col-12 col-sm-6 col-md-4 col-xl-3 px-0">
                             <div class="course-box-wrap">
-                                <a onclick="$(location).attr('href', 'http://localhost/dozer-dev/home/course/coordinador-de-proyectos-bim/7');"
+                                <a onclick="$(location).attr('href', '<?= base_url()?>home/course/coordinador-de-proyectos-bim/7');"
                                     href="javascript:;" class="has-popover">
                                     <div class="course-box">
                                         <div class="course-image">
@@ -2940,7 +2940,7 @@ section .contentt p {
                         </div>
                         <div class="col-12 col-sm-6 col-md-4 col-xl-3 px-0">
                             <div class="course-box-wrap">
-                                <a onclick="$(location).attr('href', 'http://localhost/dozer-dev/home/course/supervisor-de-proyectos-bim/8');"
+                                <a onclick="$(location).attr('href', '<?= base_url()?>home/course/supervisor-de-proyectos-bim/8');"
                                     href="javascript:;" class="has-popover">
                                     <div class="course-box">
                                         <div class="course-image">
@@ -2989,7 +2989,7 @@ section .contentt p {
                         </div>
                         <div class="col-12 col-sm-6 col-md-4 col-xl-3 px-0">
                             <div class="course-box-wrap">
-                                <a onclick="$(location).attr('href', 'http://localhost/dozer-dev/home/course/gestor-de-proyectos-bim/9');"
+                                <a onclick="$(location).attr('href', '<?= base_url()?>home/course/gestor-de-proyectos-bim/9');"
                                     href="javascript:;" class="has-popover">
                                     <div class="course-box">
                                         <div class="course-image">
@@ -3037,7 +3037,7 @@ section .contentt p {
                         </div>
                         <div class="col-12 col-sm-6 col-md-4 col-xl-3 px-0">
                             <div class="course-box-wrap">
-                                <a onclick="$(location).attr('href', 'http://localhost/dozer-dev/home/course/planificaci%C3%B3n-y-control-de-proyectos-bim/75');"
+                                <a onclick="$(location).attr('href', '<?= base_url()?>home/course/planificaci%C3%B3n-y-control-de-proyectos-bim/75');"
                                     href="javascript:;" class="has-popover">
                                     <div class="course-box">
                                         <div class="course-image">
@@ -3086,7 +3086,7 @@ section .contentt p {
                         </div>
                         <div class="col-12 col-sm-6 col-md-4 col-xl-3 px-0">
                             <div class="course-box-wrap">
-                                <a onclick="$(location).attr('href', 'http://localhost/dozer-dev/home/course/gesti%C3%B3n-bim-para-el-sector-p%C3%BAblico/76');"
+                                <a onclick="$(location).attr('href', '<?= base_url()?>home/course/gesti%C3%B3n-bim-para-el-sector-p%C3%BAblico/76');"
                                     href="javascript:;" class="has-popover">
                                     <div class="course-box">
                                         <div class="course-image">
@@ -3141,7 +3141,7 @@ section .contentt p {
                     <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
                         <div class="col-12 col-sm-6 col-md-4 col-xl-3 px-0">
                             <div class="course-box-wrap">
-                                <a onclick="$(location).attr('href', 'http://localhost/dozer-dev/home/course/expedientes-t%C3%A9cnicos-bim-aplicado-a-proyectos-de-infraestructrura-educativa/11');"
+                                <a onclick="$(location).attr('href', '<?= base_url()?>home/course/expedientes-t%C3%A9cnicos-bim-aplicado-a-proyectos-de-infraestructrura-educativa/11');"
                                     href="javascript:;" class="has-popover">
                                     <div class="course-box">
                                         <div class="course-image">
@@ -3191,7 +3191,7 @@ section .contentt p {
                         </div>
                         <div class="col-12 col-sm-6 col-md-4 col-xl-3 px-0">
                             <div class="course-box-wrap">
-                                <a onclick="$(location).attr('href', 'http://localhost/dozer-dev/home/course/expedientes-t%C3%A9cnicos-bim-aplicado-a-proyectos-de-infraestructrura-hospitalaria/12');"
+                                <a onclick="$(location).attr('href', '<?= base_url()?>home/course/expedientes-t%C3%A9cnicos-bim-aplicado-a-proyectos-de-infraestructrura-hospitalaria/12');"
                                     href="javascript:;" class="has-popover">
                                     <div class="course-box">
                                         <div class="course-image">
@@ -3241,7 +3241,7 @@ section .contentt p {
                         </div>
                         <div class="col-12 col-sm-6 col-md-4 col-xl-3 px-0">
                             <div class="course-box-wrap">
-                                <a onclick="$(location).attr('href', 'http://localhost/dozer-dev/home/course/expedientes-t%C3%A9cnicos-bim-aplicado-a-proyectos-de-infraestructura-vial/13');"
+                                <a onclick="$(location).attr('href', '<?= base_url()?>home/course/expedientes-t%C3%A9cnicos-bim-aplicado-a-proyectos-de-infraestructura-vial/13');"
                                     href="javascript:;" class="has-popover">
                                     <div class="course-box">
                                         <div class="course-image">
@@ -3291,7 +3291,7 @@ section .contentt p {
                         </div>
                         <div class="col-12 col-sm-6 col-md-4 col-xl-3 px-0">
                             <div class="course-box-wrap">
-                                <a onclick="$(location).attr('href', 'http://localhost/dozer-dev/home/course/expedientes-t%C3%A9cnicos-bim-aplicado-a-proyectos-de-pavimentaci%C3%B3n-urbano-y-rural/14');"
+                                <a onclick="$(location).attr('href', '<?= base_url()?>home/course/expedientes-t%C3%A9cnicos-bim-aplicado-a-proyectos-de-pavimentaci%C3%B3n-urbano-y-rural/14');"
                                     href="javascript:;" class="has-popover">
                                     <div class="course-box">
                                         <div class="course-image">
@@ -3341,7 +3341,7 @@ section .contentt p {
                         </div>
                         <div class="col-12 col-sm-6 col-md-4 col-xl-3 px-0">
                             <div class="course-box-wrap">
-                                <a onclick="$(location).attr('href', 'http://localhost/dozer-dev/home/course/expedientes-t%C3%A9cnicos-bim-aplicado-a-proyectos-de-agua-y-saneamiento-rural/15');"
+                                <a onclick="$(location).attr('href', '<?= base_url()?>home/course/expedientes-t%C3%A9cnicos-bim-aplicado-a-proyectos-de-agua-y-saneamiento-rural/15');"
                                     href="javascript:;" class="has-popover">
                                     <div class="course-box">
                                         <div class="course-image">
@@ -3668,7 +3668,7 @@ section .conten p {
                     <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
                         <div class="col-12 col-sm-6 col-md-4 col-xl-3 px-0">
                             <div class="course-box-wrap">
-                                <a onclick="$(location).attr('href', 'http://localhost/dozer-dev/home/course/bim-management-en-proyectos-de-arquitectura/58');"
+                                <a onclick="$(location).attr('href', '<?= base_url()?>home/course/bim-management-en-proyectos-de-arquitectura/58');"
                                     href="javascript:;" class="has-popover">
                                     <div class="course-box">
                                         <div class="course-image">
@@ -3718,7 +3718,7 @@ section .conten p {
                         </div>
                         <div class="col-12 col-sm-6 col-md-4 col-xl-3 px-0">
                             <div class="course-box-wrap">
-                                <a onclick="$(location).attr('href', 'http://localhost/dozer-dev/home/course/bim-management-en-proyectos-de-urbanismo-y-paisajismo/86');"
+                                <a onclick="$(location).attr('href', '<?= base_url()?>home/course/bim-management-en-proyectos-de-urbanismo-y-paisajismo/86');"
                                     href="javascript:;" class="has-popover">
                                     <div class="course-box">
                                         <div class="course-image">
@@ -3769,7 +3769,7 @@ section .conten p {
                         </div>
                         <div class="col-12 col-sm-6 col-md-4 col-xl-3 px-0">
                             <div class="course-box-wrap">
-                                <a onclick="$(location).attr('href', 'http://localhost/dozer-dev/home/course/bim-management-en-proyectos-de-ingenier%C3%ADa-civil-e-infraestructura/87');"
+                                <a onclick="$(location).attr('href', '<?= base_url()?>home/course/bim-management-en-proyectos-de-ingenier%C3%ADa-civil-e-infraestructura/87');"
                                     href="javascript:;" class="has-popover">
                                     <div class="course-box">
                                         <div class="course-image">
@@ -3827,7 +3827,7 @@ section .conten p {
 
                         <div class="col-12 col-sm-6 col-md-4 col-xl-3 px-0">
                             <div class="course-box-wrap">
-                                <a onclick="$(location).attr('href', 'http://localhost/dozer-dev/home/course/ingenier%C3%ADa-en-edificaciones-aplicado-al-dise%C3%B1o-supervisi%C3%B3n-construcci%C3%B3n-de-colegios-y-hospitales/83');"
+                                <a onclick="$(location).attr('href', '<?= base_url()?>home/course/ingenier%C3%ADa-en-edificaciones-aplicado-al-dise%C3%B1o-supervisi%C3%B3n-construcci%C3%B3n-de-colegios-y-hospitales/83');"
                                     href="javascript:;" class="has-popover">
                                     <div class="course-box">
                                         <div class="course-image">
@@ -3876,7 +3876,7 @@ section .conten p {
                         </div>
                         <div class="col-12 col-sm-6 col-md-4 col-xl-3 px-0">
                             <div class="course-box-wrap">
-                                <a onclick="$(location).attr('href', 'http://localhost/dozer-dev/home/course/ingenier%C3%ADa-vial-aplicado-al-dise%C3%B1o-construcci%C3%B3n-supervisi%C3%B3n-de-carreteras-pavimentos-y-puentes/84');"
+                                <a onclick="$(location).attr('href', '<?= base_url()?>home/course/ingenier%C3%ADa-vial-aplicado-al-dise%C3%B1o-construcci%C3%B3n-supervisi%C3%B3n-de-carreteras-pavimentos-y-puentes/84');"
                                     href="javascript:;" class="has-popover">
                                     <div class="course-box">
                                         <div class="course-image">
@@ -3926,7 +3926,7 @@ section .conten p {
                         </div>
                         <div class="col-12 col-sm-6 col-md-4 col-xl-3 px-0">
                             <div class="course-box-wrap">
-                                <a onclick="$(location).attr('href', 'http://localhost/dozer-dev/home/course/ingenier%C3%ADa-hidr%C3%A1ulica-aplicado-al-dise%C3%B1o-de-redes-de-abastecimiento-de-agua-potable-y-alcantarillado/85');"
+                                <a onclick="$(location).attr('href', '<?= base_url()?>home/course/ingenier%C3%ADa-hidr%C3%A1ulica-aplicado-al-dise%C3%B1o-de-redes-de-abastecimiento-de-agua-potable-y-alcantarillado/85');"
                                     href="javascript:;" class="has-popover">
                                     <div class="course-box">
                                         <div class="course-image">

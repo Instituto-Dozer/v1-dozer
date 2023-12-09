@@ -1,5 +1,10 @@
 <link href="<?php echo base_url('assets/backend/css/vendor/dataTables.bootstrap4.css'); ?>" rel="stylesheet" type="text/css" />
 <link href="<?php echo base_url('assets/backend/css/vendor/responsive.bootstrap4.css'); ?>" rel="stylesheet" type="text/css" />
+<style>
+.form-control{
+    background-color: #fff !important;
+}
+</style>
 <div id="cover-spin"></div>
 <section>
     <h3 class="course-carousel-title text-center mb-4 mt-5 ">
