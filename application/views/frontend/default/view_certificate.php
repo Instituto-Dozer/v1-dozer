@@ -1,11 +1,15 @@
 <section>
     <div class="container-lg">
         <div class="row">
-            <div class="col-lg-6 col-md-6 my-4 d-flex align-items-center">
+            <div class="col-lg-12 col-md-6 mt-5">
+                <h4 class="text-white" style="font-weight: 400 !important;">Certificado Otorgado a: <f style="color:yellow;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?= $certificate[0]->first_name . " " . $certificate[0]->last_name ?></f>
+                </h4>
+            </div>
+            <div class="col-lg-6 col-md-6 d-flex align-items-center">
                 <img class="bg-dark img-fluid" id="img-certificate" src="<?= base_url('uploads/certificates/' . $certificate[0]->link) ?>" alt="">
             </div>
             <div class="col-lg-6 col-md-6 my-2 d-flex align-items-center">
-                <div class="course-carousel-title text-center mb-4 mt-5 text-cursos">
+                <div class="course-carousel-title text-center mb-4 mt-3 text-cursos">
                     <!-- Alerta de Bootstrap oculta por defecto -->
                     <div class="alert alert-success alert-dismissible fade" id="miAlerta" role="alert">
                         ¡URL copiada!
@@ -104,7 +108,7 @@
             var urlActual = window.location.href;
 
             // Crea un área de texto temporal para copiar el contenido
-            var areaDeTextoTemporal = document.createElement("textarea");
+            var areaDeTextoTemporal = document.createElement("  ");
             areaDeTextoTemporal.value = urlActual;
 
             // Añade el área de texto temporal al DOM
@@ -123,11 +127,13 @@
             toastr.options = {
                 closeButton: true,
                 progressBar: true,
-                positionClass: 'toast-top-center',
+                positionClass: 'toast-bottom-center',
                 preventDuplicates: true,
             };
             toastr.success('¡URL Copiado!');
         }
+
+
 
         function changeOGTags() {
             // Nuevos valores
@@ -153,6 +159,27 @@
             ogDescriptionTag.setAttribute("content", newDescription);
             twDescriptionTag.setAttribute("content", newDescription);
         }
+
+        async function delayedExecution() {
+            // Esperar 1 segundo (puedes ajustar el tiempo según tus necesidades)
+            await new Promise(resolve => setTimeout(resolve, 1000));
+
+            // Llamar a la función changeOGTags después de la espera
+            changeOGTags();
+        }
+
+        // Llamar a la función delayedExecution usando async/await
+        async function runWithDelay() {
+            try {
+                await delayedExecution();
+                console.log("La función changeOGTags se ejecutó después del tiempo de espera.");
+            } catch (error) {
+                console.error("Error al ejecutar la función changeOGTags:", error);
+            }
+        }
+
+        // Llamar a la función principal
+        runWithDelay();
 
         function twitterClick(event) {
             event.preventDefault();
@@ -187,10 +214,11 @@
         function generatePDF() {
             // Get the image
             const image = document.getElementById('img-certificate');
+            const name_doc = "<?= "Certificado_" . $certificate[0]->code_certificate . ".pdf" ?>";
 
             // Calcula las dimensiones del PDF a partir de la relación de aspecto de la imagen
             const aspectRatio = image.width / image.height;
-            const pdfWidth = 210; // Ancho del PDF en mm (puedes ajustarlo según tus necesidades)
+            const pdfWidth = 210; // Ancho del PDF en mm (puedes ajustarl"o según tus necesidades)
             const pdfHeight = pdfWidth / aspectRatio;
 
             // Crea una instancia de jsPDF con las dimensiones calculadas
@@ -202,7 +230,7 @@
             // Agrega la imagen al PDF
             pdf.addImage(image.src, 'JPEG', 0, 0, pdfWidth, pdfHeight);
             // Save the PDF as a downloadable file
-            pdf.save('document.pdf');
+            pdf.save(name_doc);
         }
         changeOGTags();
         // Agrega un evento de clic al enlace para activar la función de copia

@@ -48,7 +48,9 @@
                 </a>
             -->
             <div class="new-class-margin">&nbsp;</div>
-
+            <div class="cart-box menu-icon-box" id="cart_items">
+                <?php include 'cart_items.php'; ?>
+            </div>
             <?php
             if ($this->session->userdata('admin_login') == "") {
             ?>

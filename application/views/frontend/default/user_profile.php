@@ -30,7 +30,7 @@ if (addon_status('affiliate_course')) {
                         <ul>
                             <li class="active mb-3"><a href="<?php echo site_url('home/profile/user_profile'); ?>"> <i class="fas fa-user-alt"></i> <?php echo site_phrase('profile'); ?></a></li>
 
-                          
+
                             <li class=" mb-3"><a href="<?php echo site_url('home/profile/user_mis_cursos'); ?>"> <i class="	fas fa-graduation-cap"></i> <?php echo site_phrase('cursos'); ?></a>
                             </li>
 
@@ -69,7 +69,7 @@ if (addon_status('affiliate_course')) {
                             </div>
                             <div class=" p-2 fw-lighter">
                                 <p>Te damos la bienvenida!</p>
-                                <p>Seremos tu impulso para que puedas lograr 
+                                <p>Seremos tu impulso para que puedas lograr
                                     todas tus metas profesionales! </p>
                             </div>
                         </div>
@@ -147,8 +147,6 @@ if (addon_status('affiliate_course')) {
 
                         <div class="col-md-6 p-2">
                             <label for="validationCustom04" class="text-white fw-600"><?php echo site_phrase('pais_procedencia:'); ?></label>
-
-
                             <select class="form-select style-ce" name="country" id="country" requerid>
                                 <option selected disabled value="">Seleccionar Pais de procedencia </option>
                                 <option value="1">Argentina</option>
@@ -260,8 +258,9 @@ if (addon_status('affiliate_course')) {
                         <div class="col-12 pt-4 d-flex flex-row-reverse">
                             <button class="btn bg-gc px-5 py-2 radius-8"><?php echo site_phrase('Guardar Cambios'); ?></button>
                         </div>
-
-
+                        <input type="hidden" id="country_post" name="country_post" value="<?php echo $user_details['country']; ?>">
+                        <input type="hidden" id="study_post" name="study_post" value="<?php echo $user_details['field_study']; ?>">
+                        <input type="hidden" id="education_post" name="education_post" value="<?php echo $user_details['level_education']; ?>">
                     </div>
                 </form>
             </div>
@@ -336,31 +335,46 @@ if (addon_status('affiliate_course')) {
                 </div>
             </div>
             <form action="<?php echo site_url('home/update_profile/update_email'); ?>" method="post">
-            <div class="modal-body modal-boddy">
+                <div class="modal-body modal-boddy">
 
-                <div class=""><label class="text-white fw-600" for="FristName"><?php echo site_phrase('Nueva direccion de correo'); ?></label>
-                </div>
-                <div class="input-group">
-                    <input type="email" class="form-control" name="new_email" id="new_email" placeholder="Ingrese Nueva Direccion de Correo" required>
-                </div>
-                <div class=""><label class="text-white fw-600" for="FristName"><?php echo site_phrase('Repita la nueva dirección de correo'); ?></label>
-                </div>
-                <div class="input-group">
-                    <input type="email" class="form-control" name="confirm_email" id="confirm_email" placeholder="Ingrese Nueva Direccion de Correo" required>
-                </div>
+                    <div class=""><label class="text-white fw-600" for="FristName"><?php echo site_phrase('Nueva direccion de correo'); ?></label>
+                    </div>
+                    <div class="input-group">
+                        <input type="email" class="form-control" name="new_email" id="new_email" placeholder="Ingrese Nueva Direccion de Correo" required>
+                    </div>
+                    <div class=""><label class="text-white fw-600" for="FristName"><?php echo site_phrase('Repita la nueva dirección de correo'); ?></label>
+                    </div>
+                    <div class="input-group">
+                        <input type="email" class="form-control" name="confirm_email" id="confirm_email" placeholder="Ingrese Nueva Direccion de Correo" required>
+                    </div>
 
-                <div><label class="text-white fw-600" for="current_password"><?php echo site_phrase('Confirmar contraseña'); ?></label>
+                    <div><label class="text-white fw-600" for="current_password"><?php echo site_phrase('Confirmar contraseña'); ?></label>
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="fas fa-key text-white"></i></span>
+                        <input type="password" class="form-control" id="get_password" name="get_password" placeholder="Ingrese contraseña" required>
+                    </div>
                 </div>
-                <div class="input-group">
-                    <span class="input-group-text"><i class="fas fa-key text-white"></i></span>
-                    <input type="password" class="form-control" id="get_password" name="get_password" placeholder="Ingrese contraseña" required>
-                </div>
-            </div>
-            <div class="modal-footer">
+                <div class="modal-footer">
 
-                <button type="submit" class="btn btn-primary">Understood</button>
-            </div>
+                    <button type="submit" class="btn btn-primary">Understood</button>
+                </div>
             </form>
         </div>
     </div>
 </div>
+<script>
+    function selOpt(selId, val) {
+        // Obtener el elemento <select> por su ID
+        const sel = document.getElementById(selId);
+
+        // Encontrar la opción con el valor deseado usando Array.prototype.find
+        const opt = Array.from(sel.options).find((o) => o.value === val);
+
+        // Seleccionar la opción encontrada
+        if (opt) sel.value = opt.value;
+    }
+    selOpt("country", document.getElementById("country_post").value);
+    selOpt("field_study", document.getElementById("study_post").value);
+    selOpt("level_education", document.getElementById("education_post").value);
+</script>

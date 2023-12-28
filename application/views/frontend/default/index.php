@@ -20,7 +20,7 @@
 	if (in_array($page_name, $seo_pages)) :
 		$course_details = $this->crud_model->get_course_by_id($course_id)->row_array(); ?>
 		<meta name="keywords" content="<?php echo $course_details['meta_keywords']; ?>" />
-		<meta property="og:description" content="<?php echo $course_details['meta_description']; ?>" />
+		<meta property="og:	" content="<?php echo $course_details['meta_description']; ?>" />
 	<?php elseif ($page_name == 'blog_details') : ?>
 		<meta name="keywords" content="<?php echo $blog_details['keywords']; ?>" />
 		<meta property="og:description" content="<?php echo ellipsis(strip_tags(htmlspecialchars_decode($blog_details['description'])), 140); ?>" />

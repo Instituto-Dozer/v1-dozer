@@ -232,6 +232,7 @@ class User_model extends CI_Model
             $data['birthday'] = html_escape($this->input->post('birthday'));
             $data['country'] = html_escape($this->input->post('country'));
             $data['city'] = html_escape($this->input->post('city'));
+            $data['phone'] = html_escape($this->input->post('phone'));
             $data['field_study'] = html_escape($this->input->post('field_study'));
             $data['level_education'] = html_escape($this->input->post('level_education'));
             $data['study_center'] = html_escape($this->input->post('study_center'));
