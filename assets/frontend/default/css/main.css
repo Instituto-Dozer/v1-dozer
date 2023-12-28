@@ -964,8 +964,10 @@ homepage styles
   /*  background-image: url('../../../../uploads/system/home-banner.png');
    
     background-position:45rem; background-repeat: no-repeat;  */
-  padding: 50px 0px;
-  color: #fff;
+    padding: 50px 0px 0px 0px;
+    color: #fff;
+    background: rgb(40,40,40);
+  background: linear-gradient(225deg, rgba(40,40,40,1) 62%, rgba(45,45,45,1) 62%);
 }
 .home-banner-wrap {
   max-width: 490px;
@@ -6489,14 +6491,23 @@ input[type="radio"] {
 }
 
 .text-principal {
-  font-weight: bold;
+  font-weight: 400;
   color: white;
-  font-size: 20px;
+  font-size: 18px;
+  margin: 0 100px 0 0;
 }
 .sub-text-principal {
   color: white;
   font-size: 15px;
+  margin: 0 90px 0 0;
+
 }
+
+.columgap-principal{
+  column-gap: 55px;
+}
+
+
 .text-sub-cat {
   color: white;
   font-size: 15px;
@@ -7054,18 +7065,22 @@ input[type="radio"] {
 
 @media (min-width: 1400px) {
   .img-home-banner {
-    width: 35rem;
+    width: 50rem !important;
+    bottom: 35px;
+    position: relative;
   }
   .text-principal {
-    font-size: 50px;
-    line-height: 1.2;
+    font-size: 30px !important;
+    line-height: 1.2 !important;
+    margin: 0 100px 0 0 !important;
   }
   .titulo-sub-programa {
     font-size: 20px;
   }
   .sub-text-principal {
-    font-size: 25px !important;
+    font-size: 20px !important;
     line-height: 2.1rem;
+    margin: 0 90px 0 0;
   }
   .btn-cm {
     font-size: 18px !important;
@@ -9307,6 +9322,13 @@ input[type="checkbox"] {
     padding: 5px;
     border-radius: 6px;
   }
+  .width-lesson::-webkit-scrollbar{
+    width: 7px;
+      background: #222222;
+  }
+  .width-lesson::-webkit-scrollbar-thumb{
+    background: #535a66;
+    border-radius: 5px;
 }
 @media (min-width: 1400px) {
   .course-sidebar.fixed {
@@ -9391,7 +9413,14 @@ input[type="checkbox"] {
 .pl-25px {
   padding-left: 25px;
 }
-
+.width-lesson::-webkit-scrollbar{
+  width: 7px;
+    background: #222222;
+}
+.width-lesson::-webkit-scrollbar-thumb{
+  background: #535a66;
+  border-radius: 5px;
+}
 @media (min-width: 1900px) {
   .imgpro {
     width: 690px !important;
@@ -9616,3 +9645,10 @@ input[type="checkbox"] {
 .btn-hover svg {
   fill: #ffffff;
 }
+.titulo-uno {
+  margin: 10px 462px !important;
+}
+.titulo-dos{
+margin: 19px 420px;
+font-size: 15px;
+}}
