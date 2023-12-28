@@ -15,7 +15,7 @@
 <div class="col-lg-3 order-2 mt-5 course_col hidden" id="lesson_list_loader" style="text-align: center;">
     <img src="<?php echo base_url('assets/backend/images/loader.gif'); ?>" alt="" height="50" width="50">
 </div>
-<div class="col-lg-2  order-2 course_col overflow-temas" id="lesson_list_area">
+<div class="width-contenido  order-2 course_col overflow-temas" id="lesson_list_area">
     <div class="text-stard m-3">
         <a href="<?php echo $course_details_url; ?>" class="btn-regresa"><img
                 src="<?=base_url()?>uploads/system/back.png" alt=""> <?php echo get_phrase('Regresar'); ?> </a>
@@ -23,7 +23,7 @@
     </div>
     <div>
         <p class="title-video text-white px-3 mb-0 fw-700"><?php echo $course_details['title']; ?></p>
-        <p class="title-video text-white px-3 fw-700"><?php echo site_phrase($course_details['level']); ?></p>
+        
     </div>
 
     <div class="text-center mt-5 mx-3">
@@ -39,7 +39,7 @@
     </div>
     <div class="row" style="margin: 12px -1px">
         <div class="col-12">
-            <ul class="nav nav-tabs nav-tabss justify-content-between" id="lessonTab" role="tablist">
+            <ul class="nav nav-tabs nav-tabss justify-content-between p-2" id="lessonTab" role="tablist">
                 <li class="nav-item">
                     <a class="nav-link active text-muted bg-item bg-item style-itemp" id="section_and_lessons-tab"
                         data-bs-toggle="tab" href="#section_and_lessons" role="tab" aria-controls="section_and_lessons"
@@ -47,15 +47,22 @@
 
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-muted bg-item style-itemp" id="section_and_lessons-tab" data-bs-toggle="tab"
+                    <a class=" text-muted  style-itemp" id="section_and_lessons-tab" data-bs-toggle="tab"
                         href="#section_and_lessons" role="tab" aria-controls="section_and_lessons"
                         aria-selected="true"><?php echo get_phrase('Materiales') ?></a>
 
                 </li>
+                <li class="nav-item">
+                    <a class=" text-muted  style-itemp" id="section_and_lessons-tab" data-bs-toggle="tab"
+                        href="#section_and_lessons" role="tab" aria-controls="section_and_lessons"
+                        aria-selected="true"><?php echo get_phrase('Preguntas') ?></a>
+
+                </li>
+
                 <!-- ZOOM LIVE CLASS TAB STARTS -->
                 <?php if (addon_status('live-class') || addon_status('jitsi-live-class')): ?>
                 <li class="nav-item">
-                    <a class="nav-link text-muted" id="liveclass-tab" data-bs-toggle="tab" href="#liveclass" role="tab"
+                    <a class=" text-muted" id="liveclass-tab" data-bs-toggle="tab" href="#liveclass" role="tab"
                         aria-controls="liveclass" aria-selected="false">
                         <?php echo get_phrase('live_class'); ?>
                     </a>
@@ -66,7 +73,7 @@
                 <!-- CERTIFICATE TAB -->
                 <?php if (addon_status('certificate')): ?>
                 <li class="nav-item">
-                    <a class="nav-link text-muted" id="certificate-tab" data-bs-toggle="tab" href="#certificate"
+                    <a class=" text-muted" id="certificate-tab" data-bs-toggle="tab" href="#certificate"
                         role="tab" aria-controls="certificate" aria-selected="false"
                         onclick="checkCertificateEligibility()"><?php echo get_phrase('certificate'); ?></a>
                 </li>
