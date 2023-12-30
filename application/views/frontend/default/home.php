@@ -3868,9 +3868,11 @@
 <section>
     <div class="container-xl">
         <h3 class="course-carousel-title text-center mb-4 mt-5 ">
-            <p class="text-section">Aprende de los expertos en el área BIM
+            <p style="
+    font-weight: 400;
+" class="text-section">Aprende de los expertos en el área BIM
             </p>
-            <p class="text-sub-cat"> Nos tomamos muy enserio la calidad educativa en Instituto Dozer, por ello contamos
+            <p class="text-sub-cat"> Nos tomamos muy enserio la calidad educativa en Instituto Dozer, por ello contamos <br>
                 con los mejores profesionales del sector construcción </p>
 
         </h3>
