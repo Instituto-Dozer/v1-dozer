@@ -572,6 +572,14 @@ $schedule = $this->crud_model->get_schedules($course_id)->row_array();
                                                     </div>
                                                 </div>
                                             </div> <!-- end col -->
+                                            <div class="col-xl-8">
+                                                <div class="form-group row mb-3">
+                                                    <label class="col-md-2 col-form-label" for="telegram_url">Url Telegram</label>
+                                                    <div class="col-md-10">
+                                                        <input type="text" class="form-control" id="telegram_url" name="telegram_url" value="<?php echo $course_details['url_telegram']; ?>" placeholder="Añadir url telegram" required>
+                                                    </div>
+                                                </div>
+                                            </div> <!-- end col -->
                                         </div> <!-- end row -->
                                     </div>
                                     <div class="tab-pane" id="schedule">
