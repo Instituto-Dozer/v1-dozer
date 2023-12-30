@@ -358,9 +358,9 @@
                                             </div> <!-- end col -->
                                             <div class="col-xl-8">
                                                 <div class="form-group row mb-3">
-                                                    <label class="col-md-2 col-form-label" for="telegram_url">Telegram URL</label>
+                                                    <label class="col-md-2 col-form-label" for="telegram_url">Url Telegram</label>
                                                     <div class="col-md-10">
-                                                    <input type="url" class="form-control bootstrap-tag-input" id="telegram_url" name="telegram_url" data-role="tagsinput" style="width: 100%;" placeholder="Añadir url de telegram" . />
+                                                        <input type="text" class="form-control" id="telegram_url" name="telegram_url" placeholder="Añadir url telegram" required>
                                                     </div>
                                                 </div>
                                             </div> <!-- end col -->

@@ -776,6 +776,7 @@ class Crud_model extends CI_Model
         $data['is_free_course'] = $this->input->post('is_free_course');
         $data['price'] = $this->input->post('price');
         $data['url_telegram'] = $this->input->post('telegram_url');
+
         $data['discount_flag'] = $this->input->post('discount_flag');
         $data['discounted_price'] = $this->input->post('discounted_price');
         $data['level'] = $this->input->post('level');

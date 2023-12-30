@@ -44,7 +44,7 @@ if (in_array($this->session->userdata('user_id'), $course_instructor_ids) || $th
 
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-muted bg-item bg-item style-itemp" id="section_and_lessons-tab" data-bs-toggle="tab" href="#section_and_lessons" role="tab" aria-controls="section_and_lessons" aria-selected="true"><?php echo get_phrase('Preguntas') ?></a>
+                    <a class="nav-link text-muted bg-item bg-item style-itemp" id="section_and_telegram-tab" data-bs-toggle="tab" href="#section_and_telegram" role="tab" aria-controls="section_and_telegram" aria-selected="true"><?php echo get_phrase('Preguntas') ?></a>
 
                 </li>
 
@@ -252,6 +252,18 @@ if (in_array($this->session->userdata('user_id'), $course_instructor_ids) || $th
                                 </div>
                             </div>
                         <?php endforeach; ?>
+                    </div>
+                </div>
+
+                <!------------------- INITI TELEGRAM -------------------->
+
+                <div class="tab-pane fade" id="section_and_telegram" role="tabpanel" aria-labelledby="section_and_telegram-tab">
+                    <div class="telegram-card">
+                        <p class="telegram-p mt-10">Absuelve tus dudas y consultas rápidamente con nuestros tutores en el canal de Telegram del curso:</p>
+                        <br><p class="telegram-p"><a href="<?php echo $course_details['url_telegram']; ?>" target="_blank" class="btn btn-info text-white f-19"><i class="fab fa-telegram-plane"></i> Canal de Telegram</a></p>
+                        <br><p class="telegram-p mt-30">Si aun no tienes telegram para pc, puedes instalar desde el siguiente enlace de la página oficial;</p>
+                        <br><p class="telegram-p mt-30"><a href="https://desktop.telegram.org/" target="_blank" class="btn-programa">&nbsp; Descargar Telegram Desktop &nbsp; </a></p>
+                        <br>
                     </div>
                 </div>
 
