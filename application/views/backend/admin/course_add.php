@@ -356,6 +356,14 @@
                                                     </div>
                                                 </div>
                                             </div> <!-- end col -->
+                                            <div class="col-xl-8">
+                                                <div class="form-group row mb-3">
+                                                    <label class="col-md-2 col-form-label" for="telegram_url">Telegram URL</label>
+                                                    <div class="col-md-10">
+                                                    <input type="url" class="form-control bootstrap-tag-input" id="telegram_url" name="telegram_url" data-role="tagsinput" style="width: 100%;" placeholder="Añadir url de telegram" . />
+                                                    </div>
+                                                </div>
+                                            </div> <!-- end col -->
                                         </div> <!-- end row -->
                                     </div>
                                     <div class="tab-pane" id="schedule">

@@ -548,6 +548,44 @@ class Crud_model extends CI_Model
             return $this->db->get('lesson');
         }
     }
+    public function get_lesson($type = "", $id = "")
+    {
+        $this->db->order_by("order", "asc");
+
+        $disallowed_attachment_types = array('pdf', 'txt', 'description', 'img');
+        
+        if ($type == "course") {
+            $this->db->where('course_id', $id);
+        } elseif ($type == "section") {
+            $this->db->where('section_id', $id);
+        } elseif ($type == "lesson") {
+            $this->db->where('id', $id);
+        }
+        
+        // Agregar la condición para el atributo attachment_type diferente de los valores especificados
+        $this->db->where_not_in('attachment_type', $disallowed_attachment_types);
+        
+        return $this->db->get('lesson');
+    }
+    public function get_materials($type = "", $id = "")
+    {
+        $this->db->order_by("order", "asc");
+
+        $allowed_attachment_types = array('pdf', 'txt', 'description', 'img');
+        
+        if ($type == "course") {
+            $this->db->where('course_id', $id);
+        } elseif ($type == "section") {
+            $this->db->where('section_id', $id);
+        } elseif ($type == "lesson") {
+            $this->db->where('id', $id);
+        }
+        
+        // Agregar la condición para el atributo attachment_type
+        $this->db->where_in('attachment_type', $allowed_attachment_types);
+        
+        return $this->db->get('lesson');
+    }
 
     public function add_course($param1 = "")
     {
@@ -565,6 +603,7 @@ class Crud_model extends CI_Model
         $data['category_id'] = $category_details['parent'];
         $data['requirements'] = $requirements;
         $data['price'] = $this->input->post('price');
+        $data['url_telegram'] = $this->input->post('telegram_url');
         $data['discount_flag'] = $this->input->post('discount_flag');
         $data['discounted_price'] = $this->input->post('discounted_price');
         $data['level'] = $this->input->post('level');
@@ -736,6 +775,7 @@ class Crud_model extends CI_Model
         $data['requirements'] = $requirements;
         $data['is_free_course'] = $this->input->post('is_free_course');
         $data['price'] = $this->input->post('price');
+        $data['url_telegram'] = $this->input->post('telegram_url');
         $data['discount_flag'] = $this->input->post('discount_flag');
         $data['discounted_price'] = $this->input->post('discounted_price');
         $data['level'] = $this->input->post('level');
@@ -1222,6 +1262,17 @@ class Crud_model extends CI_Model
             return $this->db->get_where('section', array('id' => $id));
         }
     }
+
+    public function get_section_materials($type_by, $id)
+    {
+        $this->db->order_by("order", "asc");
+        if ($type_by == 'course') {
+            return $this->db->get_where('section', array('course_id' => $id));
+        } elseif ($type_by == 'section') {
+            return $this->db->get_where('section', array('id' => $id));
+        }
+    }
+
 
     public function serialize_section($course_id, $serialization)
     {
