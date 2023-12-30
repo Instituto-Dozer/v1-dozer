@@ -4809,13 +4809,7 @@ border: none;
 
 .text-cursos {
   padding: 2rem 0;
-  background: rgb(34, 34, 34);
-  background: linear-gradient(
-    90deg,
-    rgba(34, 34, 34, 1) 21%,
-    rgba(56, 55, 55, 1) 50%,
-    rgba(34, 34, 34, 1) 75%
-  );
+ 
 }
 
 .programa {
@@ -7086,10 +7080,11 @@ input[type="radio"] {
     font-size: 18px !important;
   }
   .cont-cuadro {
-    border-radius: 8%;
-
-    width: 14rem !important;
-    height: 14rem !important;
+   
+    outline: 2px solid #1C6EA4;
+    outline-offset: 0px;
+    width: 25rem !important;
+    height: 7rem !important;
   }
   .icon-style-user {
     width: 4rem;
