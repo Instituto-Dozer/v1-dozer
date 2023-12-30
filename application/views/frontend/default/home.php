@@ -4,29 +4,25 @@
             <div class="row">
                 <div class=" position-relative">
                     <div class="">
-                        <div class="d-flex flex-row ">
+                        <div class="d-flex flex-row columgap-principal">
                             <div class="d-flex flex-column mb-3 ">
                                 <div class="p-2">
-                                    <h2 class="text-principal">
-                                        BIM un futuro muy <br> presente en el sector <br> de la construcción
+                                <h2 class=" text-uppercase text-principal">
+                                        BIM un futuro muy
+                                        presente en el sector
+                                        de la construcción
                                     </h2>
                                 </div>
                                 <div class="p-2">
                                     <p class="sub-text-principal">
-                                        Dozer es la institución más importante en estudios <br
-                                            class="d-none d-sm-none d-md-none d-lg-block d-xl-block">
-                                        e implementación de la metodología BIM en todo el <br
-                                            class="d-none d-sm-none d-md-none d-lg-block d-xl-block">
-                                        Perú. Somos centro autorizado de capacitación <br
-                                            class="d-none d-sm-none d-md-none d-lg-block d-xl-block">
-                                        y certificación de Autodesk:</p>
+                                    Dozer es la institución más importante en
+                                        estudios e implementación BIM en todo el Perú.
+                                        Somos centro autorizado de capacitación y
+                                        certificación de Autodesk:</p>
                                 </div>
                                 <div class="p-2"><img class="img-convenios" src="uploads\system\convenios.png" alt="">
                                 </div>
-                                <div class="p-5px ">
-                                    <a class="btn-cm" href="<?php echo site_url('home/search'); ?>">Conoce más de
-                                        Instituto Dozer</a>
-                                </div>
+                                
 
                             </div>
 
