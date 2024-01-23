@@ -553,7 +553,7 @@ class Crud_model extends CI_Model
         $this->db->order_by("order", "asc");
 
         $disallowed_attachment_types = array('pdf', 'txt', 'description', 'img');
-        
+
         if ($type == "course") {
             $this->db->where('course_id', $id);
         } elseif ($type == "section") {
@@ -561,10 +561,10 @@ class Crud_model extends CI_Model
         } elseif ($type == "lesson") {
             $this->db->where('id', $id);
         }
-        
+
         // Agregar la condición para el atributo attachment_type diferente de los valores especificados
         $this->db->where_not_in('attachment_type', $disallowed_attachment_types);
-        
+
         return $this->db->get('lesson');
     }
     public function get_materials($type = "", $id = "")
@@ -572,7 +572,7 @@ class Crud_model extends CI_Model
         $this->db->order_by("order", "asc");
 
         $allowed_attachment_types = array('pdf', 'txt', 'description', 'img');
-        
+
         if ($type == "course") {
             $this->db->where('course_id', $id);
         } elseif ($type == "section") {
@@ -580,10 +580,10 @@ class Crud_model extends CI_Model
         } elseif ($type == "lesson") {
             $this->db->where('id', $id);
         }
-        
+
         // Agregar la condición para el atributo attachment_type
         $this->db->where_in('attachment_type', $allowed_attachment_types);
-        
+
         return $this->db->get('lesson');
     }
 
@@ -1302,7 +1302,7 @@ class Crud_model extends CI_Model
         if ($lesson_type == 'video') {
             // This portion is for web application's video lesson
             $lesson_provider = $this->input->post('lesson_provider');
-            if ($lesson_provider == 'youtube' || $lesson_provider == 'vimeo') {
+            if ($lesson_provider == 'youtube' || $lesson_provider == 'vimeo' || $lesson_provider == 'vdoCipher') {
                 if ($this->input->post('video_url') == "" || $this->input->post('duration') == "") {
                     return json_encode(['error' => get_phrase('invalid_lesson_url_and_duration')]);
                 }
@@ -1361,6 +1361,14 @@ class Crud_model extends CI_Model
                 $sec = sprintf('%02d', $duration_formatter[2]);
                 $data['duration'] = $hour . ':' . $min . ':' . $sec;
                 $data['video_type'] = 'google_drive';
+            } elseif ($lesson_provider == 'vdocipher' || $lesson_provider == 'dyntube') {
+                $data['video_url'] = $this->input->post('key_url');
+                $duration_formatter = explode(':', $this->input->post('duration'));
+                $hour = sprintf('%02d', $duration_formatter[0]);
+                $min = sprintf('%02d', $duration_formatter[1]);
+                $sec = sprintf('%02d', $duration_formatter[2]);
+                $data['duration'] = $hour . ':' . $min . ':' . $sec;
+                $data['video_type'] = $lesson_provider;
             } else {
                 return json_encode(['error' => get_phrase('invalid_lesson_provider')]);
             }
@@ -1624,6 +1632,14 @@ class Crud_model extends CI_Model
                 $sec = sprintf('%02d', $duration_formatter[2]);
                 $data['duration'] = $hour . ':' . $min . ':' . $sec;
                 $data['video_type'] = 'google_drive';
+            } elseif ($lesson_provider == 'vdocipher' || $lesson_provider == 'dyntube') {
+                $data['video_url'] = $this->input->post('key_url');
+                $duration_formatter = explode(':', $this->input->post('duration'));
+                $hour = sprintf('%02d', $duration_formatter[0]);
+                $min = sprintf('%02d', $duration_formatter[1]);
+                $sec = sprintf('%02d', $duration_formatter[2]);
+                $data['duration'] = $hour . ':' . $min . ':' . $sec;
+                $data['video_type'] = $lesson_provider;
             } else {
                 return json_encode(['error' => get_phrase('invalid_lesson_provider')]);
             }

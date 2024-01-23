@@ -1,37 +1,39 @@
-<?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+<?php if (!defined('BASEPATH')) exit('No direct script access allowed');
 /**
-* CodeIgniter
-*
-* An open source application development framework for PHP 5.1.6 or newer
-*
-* @package		CodeIgniter
-* @author		ExpressionEngine Dev Team
-* @copyright	Copyright (c) 2008 - 2011, EllisLab, Inc.
-* @license		http://codeigniter.com/user_guide/license.html
-* @link		http://codeigniter.com
-* @since		Version 1.0
-* @filesource
-*/
+ * CodeIgniter
+ *
+ * An open source application development framework for PHP 5.1.6 or newer
+ *
+ * @package		CodeIgniter
+ * @author		ExpressionEngine Dev Team
+ * @copyright	Copyright (c) 2008 - 2011, EllisLab, Inc.
+ * @license		http://codeigniter.com/user_guide/license.html
+ * @link		http://codeigniter.com
+ * @since		Version 1.0
+ * @filesource
+ */
 
 /* CHECK THE ADDON STATUS */
-if (! function_exists('addon_status')) {
-    function addon_status($unique_identifier = '') {
-        $CI	=&	get_instance();
+if (!function_exists('addon_status')) {
+    function addon_status($unique_identifier = '')
+    {
+        $CI    = &get_instance();
         $CI->load->database();
         $result = $CI->db->get_where('addons', array('unique_identifier' => $unique_identifier));
         if ($result->num_rows() > 0) {
             $result = $result->row_array();
             return $result['status'];
-        }else{
+        } else {
             return 0;
         }
     }
 }
 
 /* CHECK IF THE STUDENT IS ELIGIBLE FOR DOWNLOADING THE CERTIFICATE */
-if (! function_exists('certificate_eligibility')) {
-    function certificate_eligibility($course_id = "", $user_id = "") {
-        $CI	=&	get_instance();
+if (!function_exists('certificate_eligibility')) {
+    function certificate_eligibility($course_id = "", $user_id = "")
+    {
+        $CI    = &get_instance();
         $CI->load->database();
 
         if ($user_id == "") {
@@ -40,16 +42,17 @@ if (! function_exists('certificate_eligibility')) {
         $result = $CI->db->get_where('certificates', array('course_id' => $course_id, 'student_id' => $user_id));
         if ($result->num_rows() > 0) {
             return 1;
-        }else{
+        } else {
             return 0;
         }
     }
 }
 
 /* GET THE SHAREABLE LINK OF CERTIFICATE */
-if (! function_exists('generate_certificate')) {
-    function generate_certificate($course_id = "", $user_id = "") {
-        $CI	=&	get_instance();
+if (!function_exists('generate_certificate')) {
+    function generate_certificate($course_id = "", $user_id = "")
+    {
+        $CI    = &get_instance();
         $CI->load->database();
 
         if ($user_id == "") {
@@ -61,9 +64,10 @@ if (! function_exists('generate_certificate')) {
 }
 
 /* COUNT OFFLINE PAYMENT PENDING USER */
-if (! function_exists('get_pending_offline_payment')) {
-    function get_pending_offline_payment() {
-        $CI =&  get_instance();
+if (!function_exists('get_pending_offline_payment')) {
+    function get_pending_offline_payment()
+    {
+        $CI = &get_instance();
         $CI->load->database();
 
         $count_pending_payment = count($CI->db->get_where('offline_payment', array('status' => 0))->result_array());
@@ -71,7 +75,42 @@ if (! function_exists('get_pending_offline_payment')) {
     }
 }
 
+if (!function_exists('getOTP')) {
+    function getOTP($videoId)
+    {
+        // Configura la URL de la solicitud
+        $url = "https://dev.vdocipher.com/api/videos/{$videoId}/otp";
 
+        // Configura los encabezados de la solicitud
+        $headers = array(
+            'Authorization: Apisecret ' . KEY_SECRET_VDOCIPHER,
+            'Content-Type: application/json',
+        );
+
+        // Configura los datos de la solicitud
+        $data = array(
+            'ttl' => 300,
+        );
+
+        // Inicia una sesión cURL
+        $ch = curl_init($url);
+
+        // Configura opciones cURL
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_POST, true);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));
+        curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+
+        // Ejecuta la solicitud cURL y obtén la respuesta
+        $response = curl_exec($ch);
+
+        // Cierra la sesión cURL
+        curl_close($ch);
+
+        // Decodifica la respuesta JSON
+        return json_decode($response, true);
+    }
+}
 
 // ------------------------------------------------------------------------
 /* End of file addon_helper.php */

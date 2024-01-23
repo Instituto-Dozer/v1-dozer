@@ -12,7 +12,7 @@ $sections = $this->crud_model->get_section('course', $param2)->result_array();
             echo get_phrase("video_url").' [.mp4]';
         }elseif ($param3 == 'video') {
             echo get_phrase("video_file");
-        }elseif ($param3 == 'youtube' || $param3 == 'academy_cloud' || $param3 == 'vimeo') {
+        }elseif ($param3 == 'youtube' || $param3 == 'academy_cloud' || $param3 == 'vimeo' || $param3 == 'vdocipher' || $param3 == 'dyntube') {
             echo get_phrase($param3).' '.get_phrase("video");
         }else{
             echo get_phrase($param3);
@@ -40,6 +40,8 @@ $sections = $this->crud_model->get_section('course', $param2)->result_array();
         </select>
     </div>
 
+    <?php if ($param3 == 'vdocipher'): include('vdocipher_type_lesson_add.php'); endif; ?>
+    <?php if ($param3 == 'dyntube'): include('dyntube_type_lesson_add.php'); endif; ?>
     <?php if ($param3 == 'youtube'): include('youtube_type_lesson_add.php'); endif; ?>
     <?php if ($param3 == 'academy_cloud'): include('academy_cloud_type_lesson_add.php'); endif; ?>
     <?php if ($param3 == 'vimeo'): include('vimeo_type_lesson_add.php'); endif; ?>

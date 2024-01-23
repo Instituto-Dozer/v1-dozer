@@ -29,6 +29,9 @@ $sections = $this->crud_model->get_section('course', $param3)->result_array();
         }elseif($lesson_details['lesson_type'] == 'text' && strtolower($lesson_details['attachment_type']) == 'description'){
             echo get_phrase('text');
         }
+        elseif($lesson_details['lesson_type'] == 'video' && strtolower($lesson_details['video_type']) == 'vdocipher'){
+            echo get_phrase('vdocipher');
+        }
         ?>.
     </strong>
 </div>
@@ -52,6 +55,8 @@ $sections = $this->crud_model->get_section('course', $param3)->result_array();
         </select>
     </div>
 
+    <?php if ($lesson_details['lesson_type'] == 'video' && strtolower($lesson_details['video_type']) == 'vdocipher'): include('vdocipher_type_lesson_edit.php'); endif; ?>
+    <?php if ($lesson_details['lesson_type'] == 'video' && strtolower($lesson_details['video_type']) == 'dyntube'): include('vdocipher_type_lesson_edit.php'); endif; ?>
     <?php if ($lesson_details['lesson_type'] == 'video' && strtolower($lesson_details['video_type']) == 'youtube'): include('youtube_type_lesson_edit.php'); endif; ?>
     <?php if ($lesson_details['lesson_type'] == 'video' && strtolower($lesson_details['video_type']) == 'academy_cloud'): include('academy_cloud_type_lesson_edit.php'); endif; ?>
     <?php if ($lesson_details['lesson_type'] == 'video' && strtolower($lesson_details['video_type']) == 'vimeo'): include('vimeo_type_lesson_edit.php'); endif; ?>
