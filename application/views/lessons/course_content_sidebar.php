@@ -34,7 +34,7 @@ if (in_array($this->session->userdata('user_id'), $course_instructor_ids) || $th
     </div>
     <div class="row" style="margin: 12px -1px">
         <div class="col-12">
-            <ul class="nav nav-tabs nav-tabss justify-content-between p-2" id="lessonTab" role="tablist">
+            <ul class="nav nav-tabs nav-tabss justify-content-between p-1" id="lessonTab" role="tablist">
                 <li class="nav-item">
                     <a class="nav-link active text-muted bg-item bg-item style-itemp" id="section_and_lessons-tab" data-bs-toggle="tab" href="#section_and_lessons" role="tab" aria-controls="section_and_lessons" aria-selected="true"><?php echo get_phrase('Clases') ?></a>
 
