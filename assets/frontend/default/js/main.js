@@ -57,7 +57,7 @@ var courseHeader = $(".course-header-area");
 var margin = 10;
 
 if ($("div").hasClass("course-sidebar")) {
-	var offsetTop = courseSidebar.offset().top + (193 - margin);
+	var offsetTop = courseSidebar.offset().top + (500 - margin);
 }
 
 $(window).scroll(function () {

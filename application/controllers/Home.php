@@ -334,9 +334,11 @@ class Home extends CI_Controller
     public function course($slug = "", $course_id = "")
     {
         //course_addon start
+        $course_details = $this->crud_model->get_course_by_id($course_id)->row_array();
 
 
         if (addon_status('affiliate_course')) {
+
             if (isset($_GET['ref'])) {
                 $CI    = &get_instance();
                 $CI->load->model('addons/affiliate_course_model');
@@ -358,18 +360,21 @@ class Home extends CI_Controller
                 }
             }
         }
-
-
-
-
         //course_addon end 
-
-
         $this->access_denied_courses($course_id);
         $page_data['course_id'] = $course_id;
-        $page_data['page_name'] = "course_page";
-        $page_data['page_title'] = site_phrase('course');
 
+        //If the course category is equal to 20, the course_page_course (cursos) view will be displayed
+        //If the course category is equal to 21, the course_page_course (especializaciones) view will be displayed
+        //If the course category is equal to 22, the course_page_course (diplomados) view will be displayed
+
+        if ($course_details['category_id'] == 20) {
+            $page_data['page_name'] = "course_page_course";
+        } elseif ($course_details['category_id'] == 21) {
+            $page_data['page_name'] = "course_page_specializations";
+        } elseif ($course_details['category_id'] == 22) {
+            $page_data['page_name'] = "course_page_graduates";
+        }
 
         $this->load->view('frontend/' . get_frontend_settings('theme') . '/index', $page_data);
     }
