@@ -96,8 +96,9 @@
                  </ul>
              </div>
      </div>
-     <h5 class="fw-700"><?php echo site_phrase('total'); ?>:</h5>
      <div class="cart-sidebar bg-white radius-10 py-4 px-3 box-shadow-5">
+     <h5 class="fw-700"><?php echo site_phrase('total'); ?>:</h5>
+
          <?php if (isset($coupon_code) && !empty($coupon_code) && $this->crud_model->check_coupon_validity($coupon_code)) : ?>
              <span id="total_price_of_checking_out" hidden>
                  <?php
@@ -162,7 +163,7 @@
              <input type="text" class="form-control" placeholder="<?php echo site_phrase('apply_coupon_code'); ?>" id="coupon-code">
              <div class="input-group-append">
                  <button class="btn" type="button" onclick="applyCoupon()">
-                     <i class="fas fa-spinner fa-pulse hidden" id="spinner"></i>
+                     <i class="fas fa-spinner fa-pulse" id="spinner"></i>
                      <?php echo site_phrase('apply'); ?>
                  </button>
              </div>

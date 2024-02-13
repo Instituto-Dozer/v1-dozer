@@ -27,11 +27,7 @@ $row_schedule = $this->crud_model->auth_schedule(array('course_id' => $course_id
                                 de Ingeniería Civil
                                 y Arquitectura que deseen especializarse en la metodología BIM. </p>
                             <p class="subtitle"><?php echo $course_details['short_description']; ?></p>
-
                         </div>
-
-
-
 
                         <div class="text-white">
                             <?php
